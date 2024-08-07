@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root{
+--red: hsl(0, 78%, 62%);
+--cyan: hsl(180, 62%, 55%);
+--orange: hsl(34, 97%, 64%);
+--blue: hsl(212, 86%, 64%);
+--very-dark-blue: hsl(234, 12%, 34%);
+--grayish-blue: hsl(229, 6%, 66%);
+--very-light-gray: hsl(0, 0%, 98%);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 1.25rem;
+    font-size: 15px;
+    font-family: "poppins";
+    background-color: var(--very-light-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin:1.25rem;
+}
+
+header{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+header h1:first-child{
+    color: var(--very-dark-blue);
+    font-weight: 200;
+    font-size: 30px;
+}
+
+header h1:nth-child(2){
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 30px;
+}
+
+.header p{
+    color: var(--very-dark-blue);
+    font-weight: 200;
+}
+
+.all{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.box{
+    background-color: white;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.15) ;
+    border-radius: 15px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    margin:15px;
+    width: 350px;
+}
+
+.box::after{
+    position: absolute;
+    content: '';
+    bottom:0;
+    left:0;
+    height: 10px;
+    width: 100%;
+}
+
+.box-push{
+    transform: translateY(50%);
+}
+ 
+.left-article{
+    border-style:groove;
+    border-bottom-style: hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
+    border-top-color:var(--cyan);
+}
+
+.top-article{
+  border-style:groove;
+  border-bottom-style: hidden;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  border-top-color: var(--red);
+
+}
+
+.bottom-article{
+    border-style:groove;
+    border-bottom-style: hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
+    border-top-color:var(--orange);
+}
+
+.right-article{
+    border-style:groove;
+    border-bottom-style: hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
+    border-top-color:var(--blue);   
+}
+
+.box img{
+    display: block;
+    margin-left:auto ;
+}
+
+.box:hover img{
+    transform: scale(1.1);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media(max-width:775px){
+    .box-push{
+        transform: translateY(0);
+    }
+}
